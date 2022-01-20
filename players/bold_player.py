@@ -30,3 +30,6 @@ class BoldPlayer(
 
     def receive_round_result_message(self, winners, hand_info, round_state):
         pass
+
+def setup_ai():
+    return BoldPlayer()

@@ -12,14 +12,15 @@ JQ wintership 2022 poker AI competition
 1. Build (for once) with
 
   ```
-docker build -t pokerengine .
+docker build --network=host -t pokerengine .
 ```
 
 2. Run with
 
   ```
-docker run -it --rm --name=pokerengine_test -v $(pwd)/players:/app/players pokerengine
+docker run -it --rm --name=pokerengine_test -v /path/to/players:/app/players pokerengine
 ```
+  Replace `/path/to/players` with the absolute path to `players` folder.
 
   It has 3 optional parameters, run above command with an extra `-h` for details
 
